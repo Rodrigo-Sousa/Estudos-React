@@ -1,21 +1,41 @@
+// Import direto do React
+import { useState } from "react";
+// Importando componentes
+import Header from "./components/Header";
+import Main from "./components/Main";
+import TextInput from "./components/TextInput";
+
+const idade = "27";
+
 export default function App() {
-  console.log('Teste no console do navegador');
+  // Criação do useSate (desestruturando), para manipular os dados, informando um estado inicial, e modificando com o que for declaro no input
+  const [name, setName] = useState("Rodrigo");
+
+  // Função que irá receber o conteúdo do currentTarget.value, e modificar a variável name do useState
+  function handleChangeName(newName) {
+    // Recebendo o parâmetro do nome, que foi preenchido no campo input do TextInput
+    setName(newName);
+  }
 
   return (
     <div>
-      <header>
-        <div className="bg-gray-100 mx-auto p-4">
-          <h1 className="text-center font-semibold text-xl">
-            Projeto base para o Módulo React I
-          </h1>
-        </div>
-      </header>
+      <Header>
+        {/* children, enviado via props */}
+        React - Introdução
+      </Header>
 
-      <main>
-        <div className="container mx-auto p-4">
-          <h2>O conteúdo fica aqui.</h2>
-        </div>
-      </main>
+      <Main>
+        <TextInput
+          labelDescription="Digite o seu nome: "
+          inputText={name}
+          onChangeInput={handleChangeName}
+        ></TextInput>
+
+        <p className="mt-2">
+          Olá, {name}, seu nome possui {name.length} caracteres e você tem{" "}
+          {idade} anos!{" "}
+        </p>
+      </Main>
     </div>
   );
 }

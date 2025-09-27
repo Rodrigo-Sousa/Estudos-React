@@ -19,3 +19,23 @@ Alguns arquivos desta pastão são:
 
 - `.gitignore`: Arquivo que contém o que será "ignorado" pelo git, na hora de submeter os arquivos ao repositório remoto.
 
+### Desenvolvimento
+
+1. Criação do componente: `Header.js`.
+    
+    1.1. Atrelando ele (importando) no arquivo `App.js`.
+    1.2. Passando via props(_children_), o conteúdo do  `<Header></Header>`.
+
+2. Criar o componente `Main`.
+
+3.  Adicionado um conteúdo ao paragrafo, renderizando com variáveis `const name = "Rodrigo"; const idade = "27";`.
+
+    3.1. Desenvolvido um label e um campo para input.
+    3.2. Pegando os dados informado em input, exibindo ele na frase.
+    3.3. Criando o _useState_ e trocando  o dado com o que for digitado no input.
+
+4. Separando o conteúdo do input e seu label, em um componnete expecífico: `TextInput`.
+
+    4.1. Recebendo o conteúdo por props, para mudar o valor de label, input e o conteúdo digitado.
+    4.2. Retornado esses valores para o **App.js**, e renderizando o conteúdo com o que foi modificado.
+
