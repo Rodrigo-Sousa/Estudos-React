@@ -1,21 +1,21 @@
-// Criação do componente TextInput, desestruturando os dados que ele recebe
-export default function TextInput({
-    // Label da descrição
+// Criação do componente DateInput, desestruturando os dados que ele recebe
+export default function DateInput({
+  // Label da descrição
   labelDescription = "Descrição do label",
-//   Input
-  inputText = "Texto do input",
-//   Se não for preenchido nada, ficar como null
+  //   Input
+  inputDate = "1998-10-03",
+  //   Se não for preenchido nada, ficar como null
   onChangeInput = null,
-  autoFocus = false
+  autoFocus = false,
 }) {
   // Criando a função, que verifica se há algo dentro do onChangeInput, e modifica, caso haja
-  function handleChangeInput({currentTarget}) {
+  function handleChangeInput({ currentTarget }) {
     // Desestruturando e pegando a propriedade currentTarget. Verificando se ela possui algo
     if (onChangeInput) {
-        // Variável para modificar o valor, pelo que foi digitado
+      // Variável para modificar o valor, pelo que foi digitado
       const newValue = currentTarget.value;
-    //   Passando esse valor, para o onChange e passando por props, para o App.js
-      onChangeInput(newValue)
+      //   Passando esse valor, para o onChange e passando por props, para o App.js
+      onChangeInput(newValue);
     }
   }
   return (
@@ -24,8 +24,8 @@ export default function TextInput({
         {labelDescription}
       </label>
       <input
-        type="text"
-        value={inputText}
+        type="date"
+        value={inputDate}
         onChange={handleChangeInput}
         className="border-2"
         id="inputName"

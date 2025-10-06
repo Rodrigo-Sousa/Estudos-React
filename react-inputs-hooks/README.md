@@ -39,3 +39,10 @@ Alguns arquivos desta pastão são:
     4.1. Recebendo o conteúdo por props, para mudar o valor de label, input e o conteúdo digitado.
     4.2. Retornado esses valores para o **App.js**, e renderizando o conteúdo com o que foi modificado.
 
+5. Calculando a data. Criando conteúdo do componente.
+
+    5.1. Criação da pasta componente e o arquivo: `DateInput.js`.
+
+6. Criação da pasta _Services_, onde teremos os serviços que utilizamos na nossa aplicação.
+
+    6.1. Conteúdo que recebe o que foi setado via inpu no arquivo **_App.js_** e passado por props. Nele, será separado (em dia, mês e ano), para efetuar o cálculo da idade (arquivo _dataHelpers.js_). 
