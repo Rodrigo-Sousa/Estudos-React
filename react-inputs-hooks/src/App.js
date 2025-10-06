@@ -5,7 +5,8 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import TextInput from "./components/TextInput";
 import DateInput from "./components/DateInput";
-import { getAgeFrom } from "./services/dateHelpers";
+import { getAgeFrom } from "./helpers/dateHelpers";
+import { getNewId } from "./services/idServices";
 
 export default function App() {
   // Criação do useSate (desestruturando), para manipular os dados, informando um estado inicial, e modificando com o que for declaro no input
@@ -32,13 +33,16 @@ export default function App() {
 
       <Main>
         <TextInput
+        id={getNewId()}
           labelDescription="Digite o seu nome: "
           inputText={name}
           onChangeInput={handleChangeName}
           autoFocus
         />
 
-        <DateInput labelDescription="Digite a sua data de nascimento: "
+        <DateInput 
+        id={getNewId()}
+        labelDescription="Digite a sua data de nascimento: "
         inputDate={birthDate}
         onChangeInput={handleInputBirthDate}/>
 

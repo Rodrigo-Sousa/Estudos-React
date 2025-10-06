@@ -6,6 +6,7 @@ export default function DateInput({
   inputDate = "1998-10-03",
   //   Se não for preenchido nada, ficar como null
   onChangeInput = null,
+  id = "id_do_input_date",
   autoFocus = false,
 }) {
   // Criando a função, que verifica se há algo dentro do onChangeInput, e modifica, caso haja
@@ -20,7 +21,7 @@ export default function DateInput({
   }
   return (
     <div className="flex flex-col">
-      <label className="mb-2" htmlFor="inputName">
+      <label className="mb-2" htmlFor={id}>
         {labelDescription}
       </label>
       <input
@@ -28,7 +29,7 @@ export default function DateInput({
         value={inputDate}
         onChange={handleChangeInput}
         className="border-2"
-        id="inputName"
+        id={id}
         autoFocus={autoFocus}
       />
     </div>

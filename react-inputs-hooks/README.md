@@ -43,6 +43,10 @@ Alguns arquivos desta pastão são:
 
     5.1. Criação da pasta componente e o arquivo: `DateInput.js`.
 
-6. Criação da pasta _Services_, onde teremos os serviços que utilizamos na nossa aplicação.
+6. Criação da pasta _Helpers_, onde teremos os arquivos de "ajuda" que utilizamos na nossa aplicação.
 
     6.1. Conteúdo que recebe o que foi setado via inpu no arquivo **_App.js_** e passado por props. Nele, será separado (em dia, mês e ano), para efetuar o cálculo da idade (arquivo _dataHelpers.js_). 
+
+7. _Services_, o arquivo que contém a criação do id de forma automática.
+
+    7.1. Criação do id para os inputs de forma automática, com a utilização da biblioteca _uuid_.
